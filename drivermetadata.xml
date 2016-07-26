@@ -1,0 +1,26 @@
+<Driver Description="Describe the purpose of your CloudShell shell" MainClass="driver.DellLifecycleDriver" Name="DellLifecycleDriver" Version="1.0.0">
+    <Layout>
+        <Command Description="" DisplayName="Get Running OS" Name="get_running_os" />
+        <Command Description="" DisplayName="Get Firmware" Name="get_firmware" >
+            <Parameters>
+			    <Parameter Name="firmware_type" Type="String" Mandatory = "True" DefaultValue="" DisplayName="Firmware Type" Description="Firmware type to update. can be BIOS, iDRAC or LifeCycle"/>
+            </Parameters>
+        </Command>
+        <Command Description="" DisplayName="Update Firmware" Name="update_firmware" >
+            <Parameters>
+			    <Parameter Name="firmware_type" Type="String" Mandatory = "True" DefaultValue="" DisplayName="Firmware Type" Description="Firmware type to update. can be BIOS, iDRAC or LifeCycle"/>
+            </Parameters>
+        </Command>
+        <Command Description="" DisplayName="Power Control" Name="power_control" >
+            <Parameters>
+			    <Parameter Name="operation" Type="String" Mandatory = "True" DefaultValue="" DisplayName="Power Operation" Description="Operation to perform. can be Start, Stop, Reboot, HardReset or Status to only get info"/>
+            </Parameters>
+        </Command>
+        <Command Description="" DisplayName="Get Virtual and Physical Disks" Name="get_disks" />
+        <Command Description="" DisplayName="Change Root Password" Name="change_root_password" >
+            <Parameters>
+			    <Parameter Name="password" Type="String" Mandatory = "True" DefaultValue="" DisplayName="New Password" Description="Specify the new password to change to"/>
+            </Parameters>
+        </Command>
+    </Layout>
+</Driver>
